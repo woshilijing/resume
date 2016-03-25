@@ -27,6 +27,7 @@ span{
     left:50%;
     margin-left: -320px;
     transform-origin:top;
+    overflow:hidden;/*防止滚动条的出现*/
 }
 #list{
     width:100%;
