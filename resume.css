@@ -28,6 +28,9 @@ span{
     margin-left: -320px;
     transform-origin:top;
     -webkit-transform-origin:top;
+    -moz-transform-origin:top;
+    -ms-transform-origin:top;
+    -o-transform-origin:top;
     overflow:hidden;/*防止滚动条的出现*/
 }
 #list{
@@ -352,6 +355,72 @@ span{
     transform-origin: center bottom;
 }
 
+.a2{
+    width:100%;
+}
+.a2 .z1 img:nth-child(1){
+    position: absolute;
+    top:51%;
+    left:8%;
+}
+.a2 .z1 img:nth-child(2){
+    position: absolute;
+    top:62%;
+    left:52%;
+}
+.a2 .z0 img{
+    position: absolute;
+    top:68%;
+    left:54%;
+}
+#z0 img:nth-child(1){
+    top:47%;
+    left:54%;
+    transform:rotate(720deg);
+    -webkit-transform:rotate(720deg);
+    transition: 0.8s;
+    -webkit-transition: 0.8s;
+}
+#z0 img:nth-child(2){
+    top:36%;
+    left:21%;
+    transform:rotate(720deg);
+    -webkit-transform:rotate(720deg);
+    transition: 0.8s linear 0.2s;
+    -webkit-transition: 0.8s linear 0.2s;
+}
+#z0 img:nth-child(3){
+    top:11%;
+    left:14%;
+    transform:rotate(720deg);
+    -webkit-transform:rotate(720deg);
+    transition: 0.8s linear 0.4s;
+    -webkit-transition: 0.8s linear 0.4s;
+}
+#z0 img:nth-child(4){
+    top:4%;
+    left:66%;
+    transform:rotate(720deg);
+    -webkit-transform:rotate(720deg);
+    transition: 0.8s linear 0.6s;
+    -webkit-transition: 0.8s linear 0.6s;
+}
+#z0 img:nth-child(5){
+    top:24%;
+    left:43%;
+    transform:rotate(720deg);
+    -webkit-transform:rotate(720deg);
+    transition: 0.8s linear 0.8s;
+    -webkit-transition: 0.8s linear 0.8s;
+}
+#z0 img:nth-child(6){
+    top:28%;
+    left:70%;
+    transform:rotate(720deg);
+    -webkit-transform:rotate(720deg);
+    transition: 0.8s linear 1s;
+    -webkit-transition: 0.8s linear 1s;
+}
 
 .a3{
     width:100%;
@@ -447,72 +516,6 @@ span{
     animation-fill-mode: both;
 }
 
-.a2{
-    width:100%;
-}
-.a2 .z1 img:nth-child(1){
-    position: absolute;
-    top:51%;
-    left:8%;
-}
-.a2 .z1 img:nth-child(2){
-    position: absolute;
-    top:62%;
-    left:52%;
-}
-.a2 .z0 img{
-    position: absolute;
-    top:68%;
-    left:54%;
-}
-#z0 img:nth-child(1){
-    top:47%;
-    left:54%;
-    transform:rotate(720deg);
-    -webkit-transform:rotate(720deg);
-    transition: 0.8s;
-    -webkit-transition: 0.8s;
-}
-#z0 img:nth-child(2){
-    top:36%;
-    left:21%;
-    transform:rotate(720deg);
-    -webkit-transform:rotate(720deg);
-    transition: 0.8s linear 0.2s;
-    -webkit-transition: 0.8s linear 0.2s;
-}
-#z0 img:nth-child(3){
-    top:11%;
-    left:14%;
-    transform:rotate(720deg);
-    -webkit-transform:rotate(720deg);
-    transition: 0.8s linear 0.4s;
-    -webkit-transition: 0.8s linear 0.4s;
-}
-#z0 img:nth-child(4){
-    top:4%;
-    left:66%;
-    transform:rotate(720deg);
-    -webkit-transform:rotate(720deg);
-    transition: 0.8s linear 0.6s;
-    -webkit-transition: 0.8s linear 0.6s;
-}
-#z0 img:nth-child(5){
-    top:24%;
-    left:43%;
-    transform:rotate(720deg);
-    -webkit-transform:rotate(720deg);
-    transition: 0.8s linear 0.8s;
-    -webkit-transition: 0.8s linear 0.8s;
-}
-#z0 img:nth-child(6){
-    top:28%;
-    left:70%;
-    transform:rotate(720deg);
-    -webkit-transform:rotate(720deg);
-    transition: 0.8s linear 1s;
-    -webkit-transition: 0.8s linear 1s;
-}
 
 
 
