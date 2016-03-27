@@ -19,6 +19,67 @@ html,body{
 span{
     display: inline-block;
 }
+.slider {
+    position: absolute;
+    left: 50%;
+    bottom: 2.5%;
+    width: 30px;
+    height: 21px;
+    margin-left: -20px;
+    z-index: 133;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    background: url("images/upArray.png") no-repeat center;
+    background-size:cover;
+    -webkit-animation: sliderAnimate 2s linear infinite;
+}
+@-webkit-keyframes sliderAnimate {
+    25% {
+        opacity: 0.75;
+        filter: alpha(opacity=75);
+        bottom: 30px;
+    }
+    50% {
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+        bottom: 40px;
+    }
+    75% {
+        opacity: 0.25;
+        filter: alpha(opacity=25);
+        bottom: 50px;
+
+    }
+    100% {
+        opacity: 0;
+        filter: alpha(opacity=0);
+        bottom: 20px;
+        -webkit-transform: scale(0.5);
+    }
+}
+@keyframes sliderAnimate {
+    25% {
+        opacity: 0.75;
+        filter: alpha(opacity=75);
+        bottom: 30px;
+    }
+    50% {
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+        bottom: 40px;
+    }
+    75% {
+        opacity: 0.25;
+        filter: alpha(opacity=25);
+        bottom: 50px;
+    }
+    100% {
+        opacity: 0;
+        filter: alpha(opacity=0);
+        bottom: 20px;
+    }
+}
+
 #main{
     width:640px;
     height:960px;
@@ -80,6 +141,7 @@ span{
 
     transform:translate(660px,0);
     -webkit-transform:translate(660px,0);
+    opacity: 0;
 
 }
 .a0 div img:nth-child(2){
@@ -88,12 +150,14 @@ span{
     background-size:contain;
     transform:translate(660px,0);
     -webkit-transform:translate(660px,0);
+    opacity: 0;
 }
 .a0 div img:nth-child(3){
     position: absolute;
     top:34%;
     left:5%;
     /*background-size:contain;*/
+    opacity: 0;
 }
 .a0 div span:nth-child(1){
     position: absolute;
@@ -106,6 +170,7 @@ span{
     text-shadow:1px 2px 1px rgba(255,255,255,1);
     transform:translate(-500px,0);
     -webkit-transform:translate(-500px,0);
+    opacity: 0;
 }
 .a0 div span:nth-child(2){
     position: absolute;
@@ -116,6 +181,9 @@ span{
     font:bold 48px  simsun;
     color:gray;
     text-shadow: 3px 1px 4px gray;
+    -webkit-transform: translate(0, 2000px) scale(0);
+    transform: translate(0, 2000px) scale(0);
+
 }
 .a0 div span:nth-child(3){
     position: absolute;
@@ -126,6 +194,9 @@ span{
     font:24px  simsun;
     color:gray;
     text-shadow: 3px 1px 4px gray;
+    -webkit-transform: translate(0, 200px) scale(0);
+    transform: translate(0,200px) scale(0);
+
 }
 #p0 img:nth-child(1){
     top:0;
@@ -134,6 +205,7 @@ span{
     -webkit-transform:translate(0,0);
     transition: 2s ease-in;
     -webkit-transition: 2s ease-in;
+    opacity: 1;
 }
 #p0 img:nth-child(2){
     top:9%;
@@ -142,6 +214,7 @@ span{
     -webkit-transform:translate(0,0);
     transition: 2s ease-in;
     -webkit-transition: 2s ease-in;
+    opacity: 1;
 }
 #p0 img:nth-child(3){
     -webkit-animation: move 3.5s linear infinite;
@@ -149,6 +222,8 @@ span{
 
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
+    opacity: 1;
+
 }
 @keyframes move {
     0%{
@@ -167,6 +242,58 @@ span{
     -webkit-transform:translate(0,0);
     transition: 1.5s ease-in;
     -webkit-transition: 1.5s ease-in;
+    opacity: 1;
+}
+
+@-webkit-keyframes animate6 {
+    0% {
+        -webkit-transform: translate(0, 100px) scale(1);
+        transform: translate(0, 100px) scale(1);;
+    }
+   /* 50% {
+        -webkit-transform: translate(0, 280px) scale(2);
+        transform: translate(0, 280px) scale(2);
+    }*/
+    50% {
+        -webkit-transform: translate(0, 50px) scale(1.5);
+        transform: translate(0, 50px) scale(1.5);
+    }
+    100% {
+        -webkit-transform: translate(0, 0) scale(1);
+        transform: translate(0, 0) scale(1);
+    }
+}
+@keyframes animate6 {
+    25% {
+        -webkit-transform: translate(0, 100px) scale(1);
+        transform: translate(0, 100px) scale(1);;
+    }
+   /* 50% {
+        -webkit-transform: translate(0, 200px) scale(2);
+        transform: translate(0, 280px) scale(2);
+    }*/
+    50% {
+        -webkit-transform: translate(0, 50px) scale(1.5);
+        transform: translate(0, 50px) scale(1.5);
+    }
+    100% {
+        -webkit-transform: translate(0, 0) scale(1);
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+
+
+
+#p1 span:nth-child(2){
+    -webkit-animation: animate6 3s linear 0s forwards;
+    animation: animate6 3s linear 0s forwards;
+
+}
+#p1 span:nth-child(3){
+    -webkit-animation: animate6 3s linear 0s forwards;
+    animation: animate6 3s linear 0s forwards;
+
 }
 .a1{
     width:100%;
@@ -189,11 +316,13 @@ span{
     position: absolute;
     top:36%;
     left:4%;
+    opacity: 0;
 }
 .a1 div img:nth-child(4){
     position: absolute;
     top:41%;
     left:26%;
+    opacity: 0;
 
 }
 .a1 div h1{
@@ -202,6 +331,7 @@ span{
     left:40%;
     color:#fff;
     font-size:48px;
+    opacity:0;
 }
 .a1 .inFor{
     position: absolute;
@@ -213,6 +343,8 @@ span{
     font-weight:bold;
     font-size:32px;
     transform-origin:top;
+    -webkit-transform-origin: top;
+    opacity: 0;
 }
 .a1 .inFor1{
     position: absolute;
@@ -223,6 +355,7 @@ span{
     color:#fff;
     font-weight:bold;
     font-size:32px;
+    opacity: 0;
 }
 
 
@@ -239,6 +372,14 @@ span{
 
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
+}
+#w0 img:nth-child(3){
+    -webkit-animation: fadeIn 2s linear;
+    animation: fadeIn 2s linear;
+
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+
 }
 @-webkit-keyframes fadeIn {
     from{
@@ -257,10 +398,12 @@ span{
     }
 }
 #w0 img:nth-child(4) {
+    opacity: 1;
     -webkit-animation:bounce 1s infinite;
     animation:bounce 1s infinite;
     -webkit-transform-origin: center bottom;
     transform-origin: center bottom;
+
 }
 @-webkit-keyframes bounce {
     from, 20%, 53%, 80%, to {
@@ -319,6 +462,7 @@ span{
 #w1 h1{
     -webkit-animation: zoomIn 1s;
     animation: zoomIn 1s;
+    opacity: 1;
 }
 @-webkit-keyframes zoomIn {
     from {
@@ -347,12 +491,14 @@ span{
     -webkit-transform: rotateY(720deg);
     transition: 2s;
     -webkit-transition: 2s;
+    opacity: 1;
 }
 #w3{
     -webkit-animation:bounce 1s 3 forwards;
     animation:bounce 1s 3  forwards;
     -webkit-transform-origin: center bottom;
     transform-origin: center bottom;
+    opacity: 1;
 }
 
 .a2{
@@ -431,27 +577,32 @@ span{
     left:16%;
     width:320px;
     height:480px;
+    opacity:0;
 
 }
 .a3 div img:nth-child(2){
     position: absolute;
     top:83%;
     left:12%;
+    opacity:0;
 }
 .a3 div img:nth-child(3){
     position: absolute;
     top:79%;
     left:63%;
+    opacity:0;
 }
 .a3 div img:nth-child(4){
      position: absolute;
      top:89%;
      left:72%;
+    opacity:0;
  }
 .a3 div img:nth-child(5){
     position: absolute;
     top:78%;
     left:83%;
+    opacity:0;
 
 }
 .a3 .k1 img:nth-child(1){
@@ -462,6 +613,7 @@ span{
     left:16%;*/
     width:480px;
     height:180px;
+    opacity:0;
 }
 .a3 .k1 img:nth-child(2){
     position: absolute;
@@ -472,10 +624,12 @@ span{
 
     width:500px;
     height:180px;
+    opacity:0;
 }
 .a3 img{
     -webkit-transform:translate(0,500px);
     transform:translate(0,500px);
+
 
 }
 #k0 img{
@@ -483,6 +637,7 @@ span{
     transition:1s linear;
     -webkit-transform:translate(0,0px);
     transform:translate(0,0px);
+    opacity:1;
 
 }
 @-webkit-keyframes zoomIn {
@@ -514,6 +669,7 @@ span{
     animation: zoomIn 1s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
+    opacity:1;
 }
 
 
