@@ -125,11 +125,11 @@ span{
 .audio {
     display: none;
     position: absolute;
-    left: -9px;
+    left: 12px;
     top: 18px;
-    height: 30px;
-    width: 90px;
-    background: url("file/music.svg") no-repeat;
+    height: 33px;
+    width: 33px;
+    background: url("images/music.png") no-repeat;
     z-index: 120;
     background-size: 100% 100%;
     -webkit-transform: rotate(0deg);
